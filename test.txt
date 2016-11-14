@@ -1,1 +1,2 @@
-this is a sample text.
+This is a sample text.
+Created on 14 Nov 2014.
