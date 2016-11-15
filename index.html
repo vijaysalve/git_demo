@@ -9,7 +9,7 @@
 <tr><td data-bind="text:$data.Id"></td><td data-bind="text:$data.Name"></td></tr>
 <!-- ko foreach: $root.Students -->
 
-<!-- ko if: $data.DeptId == $parent.Id -->
+<!-- ko if:$data.DeptId == $parent.Id -->
 <tr><td data-bind="text:$data.Id"></td><td data-bind="text:$data.Name"></td></tr>
 <!-- /ko -->
 
