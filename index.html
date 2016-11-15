@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js'></script>
+</head>
+<body>
+
+<table>
+<tbody data-bind="foreach: $root.Departments">
+<tr><td data-bind="text:$data.Id"></td><td data-bind="text:$data.Name"></td></tr>
+<!-- ko foreach: $root.Students -->
+
+<!-- ko if: $data.DeptId == $parent.Id -->
+<tr><td data-bind="text:$data.Id"></td><td data-bind="text:$data.Name"></td></tr>
+<!-- /ko -->
+
+<!-- /ko -->
+</tbody>
+</table>
+</body>
+<script lang="javascript" type="text/javascript">
+
+
+function AppViewModel() {
+   this.Departments = [{Id:1,Name:'Dept1'},{Id:2,Name:'Dept2'}];
+   this.Students = [{Id:1,Name:'Std1',DeptId:1},{Id:2,Name:'Std2',DeptId:2},{Id:3,Name:'Std3',DeptId:2}];
+}
+
+ko.applyBindings(new AppViewModel());
+
+
+</script>
+
+
+</html>
